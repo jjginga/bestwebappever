@@ -22,7 +22,7 @@
 
   <context-param>
     <param-name>spring.profiles.active</param-name>
-    <param-value>heroku</param-value>
+    <param-value>prod</param-value>
   </context-param>
 
   <!--
@@ -35,7 +35,7 @@
   </context-param>
 
   <listener>
-    <listener-class>org.academiadecodigo.bestwebappever.Log4jWebConfig</listener-class>
+    <listener-class>org.academiadecodigo.bestwebappever.Controller</listener-class>
   </listener>
 
   <!--
