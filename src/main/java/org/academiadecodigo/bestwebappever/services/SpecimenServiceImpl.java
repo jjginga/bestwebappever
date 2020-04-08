@@ -31,7 +31,7 @@ public class SpecimenServiceImpl implements SpecimenService {
     }
 
     @Override
-    public List<Specimen> listSpecimen() {
+    public List<Specimen> listSpecimens() {
         return specimenDao.findAll();
     }
 

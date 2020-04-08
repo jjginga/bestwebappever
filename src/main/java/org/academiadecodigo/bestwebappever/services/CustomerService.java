@@ -74,5 +74,5 @@ public interface CustomerService {
     void removeSpecimen(Integer id, Integer specimenId)
             throws CustomerNotFoundException,  RecipientNotFoundException;
 
-    void transferSpecimen(Integer sid, Integer rip, Integer specimenId) throws CustomerNotFoundException;
+    void transferSpecimen(Integer sid, Integer rip, Integer specimenId) throws CustomerNotFoundException, RecipientNotFoundException;
 }

@@ -151,13 +151,19 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Transactional
     @Override
-    public void transferSpecimen(Integer sid, Integer rip, Integer specimenId) throws CustomerNotFoundException {
+    public void transferSpecimen(Integer sid, Integer rip, Integer specimenId) throws CustomerNotFoundException, RecipientNotFoundException {
 
         Customer sCustomer = customerDao.findById(sid);
         Customer rCustomer = customerDao.findById(rip);
 
         if (sCustomer == null || rCustomer == null) {
             throw new CustomerNotFoundException();
+        }
+
+        Specimen specimen = specimenDao.findById(specimenId);
+
+        if (!sCustomer.getSpecimens().contains(specimen)) {
+            throw new RecipientNotFoundException();
         }
 
         // TODO missing validations?
