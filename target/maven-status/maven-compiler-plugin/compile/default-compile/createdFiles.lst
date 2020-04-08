@@ -8,8 +8,8 @@ org/academiadecodigo/bestwebappever/persistence/model/Specimen.class
 org/academiadecodigo/bestwebappever/converters/SpecimenDtoToSpecimen.class
 org/academiadecodigo/bestwebappever/exceptions/TransactionInvalidException.class
 org/academiadecodigo/bestwebappever/errors/ErrorMessage.class
-org/academiadecodigo/bestwebappever/services/SpecimenServiceImpl.class
 org/academiadecodigo/bestwebappever/services/SpecimenService.class
+org/academiadecodigo/bestwebappever/services/SpecimenServiceImpl.class
 org/academiadecodigo/bestwebappever/converters/CustomerDtoToCustomer.class
 org/academiadecodigo/bestwebappever/exceptions/CustomerNotFoundException.class
 org/academiadecodigo/bestwebappever/converters/CustomerToCustomerDto.class
@@ -20,10 +20,10 @@ org/academiadecodigo/bestwebappever/converters/AbstractConverter.class
 org/academiadecodigo/bestwebappever/SpringBootstrap.class
 org/academiadecodigo/bestwebappever/persistence/dao/jpa/GenericJpaDao.class
 org/academiadecodigo/bestwebappever/exceptions/AssociationExistsException.class
-org/academiadecodigo/bestwebappever/persistence/model/Model.class
 org/academiadecodigo/bestwebappever/exceptions/RecipientNotFoundException.class
-org/academiadecodigo/bestwebappever/persistence/dao/SpecimenDao.class
+org/academiadecodigo/bestwebappever/persistence/model/Model.class
 org/academiadecodigo/bestwebappever/exceptions/BestWebAppEverException.class
+org/academiadecodigo/bestwebappever/persistence/dao/SpecimenDao.class
 org/academiadecodigo/bestwebappever/services/CustomerServiceImpl.class
 org/academiadecodigo/bestwebappever/converters/SpecimenToSpecimenDto.class
 org/academiadecodigo/bestwebappever/persistence/dao/jpa/JpaCustomerDao.class

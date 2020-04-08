@@ -79,7 +79,7 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
+  webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
@@ -6734,6 +6734,7 @@ button.bg-dark:focus {
   padding-left: 1rem !important; }
 
 .p-4 {
+
   padding: 1.5rem !important; }
 
 .pt-4,
@@ -8379,7 +8380,9 @@ h1, h2, h3, h4, h5,
   @media (min-width: 992px) {
     #colorlib-main {
       width: 75%; } }
-
+.center{
+  position: center;
+}
 .colorlib-nav-toggle {
   cursor: pointer;
   text-decoration: none; }
@@ -8480,10 +8483,14 @@ h1, h2, h3, h4, h5,
       opacity: 1;
       visibility: visible; } }
 
+.imagemcantodireito{
+  padding-top: 1px;
+}
 .ftco-about .img {
   width: 100%;
   height: 500px; }
   .ftco-about .img.img-2 {
+    padding-top: 10%;
     height: 250px; }
 
 .ftco-about .text h3 {
