@@ -1,4 +1,4 @@
-package org.academiadecodigo.bestwebappever.dao;
+package org.academiadecodigo.bestwebappever.persistence.dao;
 
 import org.academiadecodigo.bestwebappever.persistence.model.Customer;
 
