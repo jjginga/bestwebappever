@@ -1,7 +1,7 @@
 package org.academiadecodigo.bestwebappever.persistence.dao.jpa;
 
 import org.academiadecodigo.bestwebappever.persistence.dao.SpecimenDao;
-import org.academiadecodigo.bestwebappever.persistence.model.Recipient;
+import org.academiadecodigo.bestwebappever.persistence.model.Specimen;
 import org.springframework.stereotype.Repository;
 
 /**
