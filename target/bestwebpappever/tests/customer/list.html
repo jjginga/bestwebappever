@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header" />
+</head>
+<body>
+<div class="container">
+
+    <div th:replace="action :: action"></div>
+
+    <h2>Specimens List</h2>
+    <div th:if="${not #lists.isEmpty(specimens)}">
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            <tr th:each="specimen : ${specimens}">
+                <td th:text="${specimen.name}"></td>
+                <td th:text="${specimen.description}"></td>
+                <td th:text="${specimen.image}"></td> //TODO this is an image
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+</body>
+</html>
+
