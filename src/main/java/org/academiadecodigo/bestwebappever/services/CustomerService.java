@@ -48,16 +48,16 @@ public interface CustomerService {
      * Gets the list of customer recipients
      *
      * @param id the customer id
-     * @return the list of recipients of the customer
+     * @return the list of specimens of the customer
      * @throws CustomerNotFoundException
      */
-    List<Specimen> listRecipients(Integer id) throws CustomerNotFoundException;
+    List<Specimen> listSpecimens(Integer id) throws CustomerNotFoundException;
 
     /**
      * Adds a recipient to the customer
      *
      * @param id        the customer id
-     * @param specimen the recipient id
+     * @param specimen the specimen id
      * @throws CustomerNotFoundException
      */
     Specimen addSpecimen(Integer id, Specimen specimen)
@@ -67,7 +67,7 @@ public interface CustomerService {
      * Removes a recipient from the customer
      *
      * @param id          the customer id
-     * @param specimenId the recipient id
+     * @param specimenId the specimen id
      * @throws CustomerNotFoundException
      * @throws RecipientNotFoundException
      */

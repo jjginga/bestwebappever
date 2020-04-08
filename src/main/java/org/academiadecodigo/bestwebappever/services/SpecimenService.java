@@ -10,8 +10,8 @@ public interface SpecimenService {
     /**
      * Gets the recipient
      *
-     * @param id the recipient id
-     * @return the recipient
+     * @param id the specimen id
+     * @return the specimen
      */
     Specimen get(Integer id);
 }

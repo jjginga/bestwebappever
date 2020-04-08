@@ -114,9 +114,9 @@ public class Customer extends AbstractModel {
     /**
      * Adds a new specimen to the customer
      *
-     * @param specimen the account to add
+     * @param specimen the specimen to add
      */
-    public void addAccount(Specimen specimen) {
+    public void addSpecimen(Specimen specimen) {
         specimens.add(specimen);
         specimen.setCustomer(this);
     }
@@ -131,25 +131,6 @@ public class Customer extends AbstractModel {
         specimen.setCustomer(null);
     }
 
-    /**
-     * Adds a new specimen to the customer
-     *
-     * @param specimen the specimen to add
-     */
-    public void addSpecimen(Specimen specimen) {
-        specimens.add(specimen);
-        specimen.setCustomer(this);
-    }
-
-    /**
-     * Removes a specimen from the customer
-     *
-     * @param specimen the specimen to remove
-     */
-    public void removeRecipient(Specimen specimen) {
-        specimens.remove(specimen);
-        specimen.setCustomer(null);
-    }
 
     /**
      * @see Object#toString()
