@@ -3,6 +3,7 @@
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/errors/ErrorMessage.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/SpecimenService.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/CustomerDao.java
+/home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/web/SpecimensController.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/SpecimenDtoToSpecimen.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/Dao.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/Test.java
@@ -24,7 +25,11 @@
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/command/SpecimenDto.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/AbstractConverter.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/exceptions/RecipientNotFoundException.java
+/home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/Upload.java
+/home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/MainWebAppInitializer.java
+/home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/web/MainController.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/jpa/GenericJpaDao.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/exceptions/AssociationExistsException.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/SpecimenServiceImpl.java
+/home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/web/CustomerController.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/AbstractModel.java
