@@ -3,11 +3,13 @@ package org.academiadecodigo.bestwebappever.converters;
 import org.academiadecodigo.bestwebappever.command.CustomerDto;
 import org.academiadecodigo.bestwebappever.persistence.model.Customer;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
 /**
  * A {@link Converter} implementation, responsible for {@link Customer} to {@link CustomerDto} type conversion
  */
-public class CustomerToCustomerDto extends AbstractConverter<Customer, CustomerToCustomerDto> {
+@Component
+public class CustomerToCustomerDto extends AbstractConverter<Customer, CustomerDto> {
     /**
      * Converts the customer model object into a customer DTO
      *

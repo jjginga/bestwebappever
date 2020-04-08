@@ -19,11 +19,10 @@ public abstract class AbstractConverter<S, T> implements Converter<S, T> {
      * @return the list of converted elements
      */
 
-    @Override
     public List<T> convert(List<S> listToConvert) {
         List<T> conversions = new ArrayList<>(listToConvert.size());
 
-        for (S toConvert : conversions) {
+        for (S toConvert : listToConvert) {
             conversions.add(convert(toConvert));
         }
 
