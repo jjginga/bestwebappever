@@ -5,6 +5,8 @@ import org.academiadecodigo.bestwebappever.persistence.model.Specimen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SpecimenServiceImpl implements SpecimenService {
 
@@ -27,5 +29,11 @@ public class SpecimenServiceImpl implements SpecimenService {
     public Specimen get(Integer id) {
         return specimenDao.findById(id);
     }
+
+    @Override
+    public List<Specimen> listSpecimen() {
+        return specimenDao.findAll();
+    }
+
 
 }

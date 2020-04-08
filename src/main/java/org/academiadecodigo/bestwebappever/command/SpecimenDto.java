@@ -3,6 +3,7 @@ package org.academiadecodigo.bestwebappever.command;
 import javax.validation.constraints.*;
 
 public class SpecimenDto {
+
     private Integer id;
 
     @NotNull(message = "Account number is mandatory")
