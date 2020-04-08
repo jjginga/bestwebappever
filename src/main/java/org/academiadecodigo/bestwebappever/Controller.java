@@ -11,7 +11,7 @@ public class Controller {
     @RequestMapping(method = RequestMethod.GET, path = "/")
     public String init() {
 
-        return "cenas";
+        return "ionize/index";
     }
 
 
