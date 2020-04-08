@@ -3,6 +3,7 @@ package org.academiadecodigo.bestwebappever.controller.web;
 import org.academiadecodigo.bestwebappever.command.SpecimenDto;
 import org.academiadecodigo.bestwebappever.converters.*;
 import org.academiadecodigo.bestwebappever.exceptions.*;
+import org.academiadecodigo.bestwebappever.persistence.model.Customer;
 import org.academiadecodigo.bestwebappever.persistence.model.Specimen;
 import org.academiadecodigo.bestwebappever.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,9 +47,9 @@ public class SpecimensController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = {"/list", "/", ""})
-    public String listCustomers(Model model) {
+    public String listSpecimens(Model model) {
 
-        model.addAttribute("specimen", specimenToSpecimenDto.convert(specimenService.listSpecimen()));
+        model.addAttribute("specimen", specimenToSpecimenDto.convert(specimenService.listSpecimens()));
 
         return "specimen/list";
     }
@@ -69,8 +70,8 @@ public class SpecimensController {
         return "specimen/add-update";
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = {"/{cid}/recipient/", "/{cid}/recipient"}, params = "action=save")
-    public String saveSpecimen(Model model, @PathVariable Integer cid, @Valid @ModelAttribute("recipient") SpecimenDto specimenDto,
+    @RequestMapping(method = RequestMethod.POST, path = {"/{cid}/specimen/", "/{cid}/specimen"}, params = "action=save")
+    public String saveSpecimen(Model model, @PathVariable Integer cid, @Valid @ModelAttribute("specimen") SpecimenDto specimenDto,
                                 BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
         model.addAttribute("customer", customerToCustomerDto.convert(customerService.get(cid)));
@@ -93,27 +94,48 @@ public class SpecimensController {
         }
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = {"/{cid}/recipient/", "/{cid}/recipient"}, params = "action=cancel")
+    @RequestMapping(method = RequestMethod.POST, path = {"/{cid}/specimen/", "/{cid}/specimen"}, params = "action=cancel")
     public String cancelSaveSpecimen(@PathVariable Integer cid) {
         //we could use an anchor tag in the view for this, but we might want to do something clever in the future here
         return "redirect:/customer/" + cid;
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/{cid}/recipient/{id}/delete")
-    public String deleteRecipient(@PathVariable Integer cid, @PathVariable Integer id, RedirectAttributes redirectAttributes) {
+    @RequestMapping(method = RequestMethod.GET, path = "/{cid}/specimen/{id}/delete")
+    public String deleteSpecimen(@PathVariable Integer cid, @PathVariable Integer id, RedirectAttributes redirectAttributes) {
 
         Specimen specimen = specimenService.get(id);
         try {
             customerService.removeSpecimen(cid, id);
         } catch (CustomerNotFoundException e) {
-            //TODO
-            e.printStackTrace();
+            //TODO HTTP RESPONSE
+            return "redirect:/specimen";
         } catch (RecipientNotFoundException e) {
-            e.printStackTrace();
+            return "redirect:/specimen";
         }
         redirectAttributes.addFlashAttribute("lastAction", "Deleted " + specimen.getName());
         return "redirect:/customer/" + cid + "/specimen";
     }
 
     //TODO METHODS TO TRANSFER
+
+    @RequestMapping(method = RequestMethod.POST, path = {"/{sid}/{rip}/specimen/{id}/delete"})
+    public String transfer(Model model, @PathVariable Integer sid, @PathVariable Integer rip, @PathVariable Integer id,
+                           @Valid @ModelAttribute SpecimenDto specimenDto, BindingResult bindingResult, RedirectAttributes redirectAttributes) throws Exception {
+
+        // TODO MISSING VALIDATIONS?!
+        Customer sCustomer = customerService.get(sid);
+        Customer rCustomer = customerService.get(rip);
+
+        Specimen transferedSpecimen = specimenDtoToSpecimen.convert(specimenDto);
+        customerService.transferSpecimen(sid, rip, id);
+
+        model.addAttribute("sCustomer", customerToCustomerDto.convert(sCustomer));
+        model.addAttribute("rCustomer", customerToCustomerDto.convert(rCustomer));
+
+        model.addAttribute("specimen", specimenToSpecimenDto.convert(transferedSpecimen));
+
+        return "redirect:/specimen";
+
+    }
+
 }

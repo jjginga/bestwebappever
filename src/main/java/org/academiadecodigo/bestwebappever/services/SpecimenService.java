@@ -17,5 +17,5 @@ public interface SpecimenService {
      */
     Specimen get(Integer id);
 
-    List<Specimen> listSpecimen();
+    List<Specimen> listSpecimens();
 }
