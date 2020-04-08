@@ -1,6 +1,6 @@
-package org.academiadecodigo.bestwebappever.dao.jpa;
+package org.academiadecodigo.bestwebappever.persistence.dao.jpa;
 
-import org.academiadecodigo.bestwebappever.dao.Dao;
+import org.academiadecodigo.bestwebappever.persistence.dao.Dao;
 import org.academiadecodigo.bestwebappever.persistence.model.Model;
 
 
@@ -63,9 +63,6 @@ public abstract class GenericJpaDao<T extends Model> implements Dao<T> {
         return em.find(modelType, id);
     }
 
-    /**
-     * @see Dao#saveOrUpdate(Model)
-     */
     @Override
     public T saveOrUpdate(T modelObject) {
         return em.merge(modelObject);
