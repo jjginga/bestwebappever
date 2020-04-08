@@ -3,7 +3,9 @@ package org.academiadecodigo.bestwebappever.services;
 import org.academiadecodigo.bestwebappever.persistence.dao.SpecimenDao;
 import org.academiadecodigo.bestwebappever.persistence.model.Specimen;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SpecimenServiceImpl implements SpecimenService {
 
     private SpecimenDao specimenDao;

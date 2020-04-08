@@ -151,7 +151,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Transactional
     @Override
-    public void transferSpecimen(Integer sid, Integer rip, Integer specimenId) {
+    public void transferSpecimen(Integer sid, Integer rip, Integer specimenId) throws CustomerNotFoundException {
 
         Customer sCustomer = customerDao.findById(sid);
         Customer rCustomer = customerDao.findById(rip);
@@ -160,7 +160,7 @@ public class CustomerServiceImpl implements CustomerService {
             throw new CustomerNotFoundException();
         }
 
-        //missing validations?
+        // TODO missing validations?
 
         sCustomer.removeSpecimen(specimenDao.findById(specimenId));
         rCustomer.addSpecimen(specimenDao.findById(specimenId));
