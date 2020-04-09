@@ -8484,13 +8484,13 @@ h1, h2, h3, h4, h5,
   width: 100%;
   height: 500px; }
   .ftco-about .img.img-2 {
-    height: 250px; }
+    height: 500px; }
 
 .ftco-about .text h3 {
   font-weight: 400; }
   .ftco-about .text h3 span {
     font-weight: 700;
-    color: #0028ff; }
+    color: black; }
 
 .services {
   width: 100%; }
