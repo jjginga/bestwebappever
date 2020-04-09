@@ -36,10 +36,7 @@ public class SpecimenDtoToSpecimen extends AbstractConverter<SpecimenDto, Specim
 
         Specimen specimen = (specimenDto.getId() != null ? specimenService.get(specimenDto.getId()) : new Specimen());
 
-        specimen.setSpecimenNumber(specimenDto.getSpecimenNumber());
         specimen.setName(specimenDto.getName());
-        specimen.setEmail(specimenDto.getEmail());
-        specimen.setPhone(specimenDto.getPhone());
         specimen.setDescription(specimenDto.getDescription());
 
         return specimen;

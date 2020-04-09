@@ -48,7 +48,7 @@ public class CustomerController {
     @RequestMapping(method = RequestMethod.GET, path = {"/list", "/", ""})
     public String listCustomers(Model model) {
         model.addAttribute("customers", customerToCustomerDto.convert(customerService.list()));
-        return "customer/list";
+        return "cenas";
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/add")
