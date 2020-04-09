@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
   <head>
     <title>Destiny</title>
     <meta charset="utf-8">
@@ -40,6 +39,7 @@
 					<li><a href="index.html">Home</a></li>
 					<li class="colorlib-active"><a href="give.html">Give</a></li>
 					<li><a href="adopt">Adopt</a></li>
+					<li><a href="adopt.html">Adopt</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
@@ -64,63 +64,182 @@
 		<div id="colorlib-main">
 			<section class="ftco-section ftco-no-pt ftco-no-pb">
 	    	<div class="container px-0">
-
-
-
-
-
-
-                    <h2>Customer Details</h2>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <form class="form-horizontal" th:object="${customer}" th:action="@{'/customer'}" method="post">
-
-                                <!-- since we are using same form for add and update,
-                                  we need to bind id input field to customer object
-                                  to avoid duplicating records on update -->
-                                <input type="hidden" th:field="*{id}"/>
-
-                                <div class="form-group" th:classappend="${#fields.hasErrors('firstName')} ? has-error">
-                                    <label class="col-sm-2 control-label">First Name:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" th:field="*{firstName}"/>
-                                        <span class="help-block" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First Name error messages</span>
-                                    </div>
-                                </div>
-                                <div class="form-group" th:classappend="${#fields.hasErrors('lastName')} ? has-error">
-                                    <label class="col-sm-2 control-label">Last Name:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" th:field="*{lastName}"/>
-                                        <span class="help-block" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last Name error messages</span>
-                                    </div>
-                                </div>
-                                <div class="form-group" th:classappend="${#fields.hasErrors('email')} ? has-error">
-                                    <label class="col-sm-2 control-label">Email:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" th:field="*{email}"/>
-                                        <span class="help-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error messages</span>
-                                    </div>
-                                </div>
-                                <div class="form-group" th:classappend="${#fields.hasErrors('phone')} ? has-error">
-                                    <label class="col-sm-2 control-label">Phone:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" th:field="*{phone}"/>
-                                        <span class="help-block" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">Phone error messages</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <button type="submit" class="btn btn-primary" name="action" value="save">Submit</button>
-                                        <button type="cancel" class="btn btn-danger" name="action" value="cancel">Cancel</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                </body>
-                </html>
+	    		<div class="row no-gutters">
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_1.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="heading">
+	    								<div class="meta-wrap">
+												<p class="meta">
+				              		<span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+				              		<span><a href="single.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+				              		<span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+				              	</p>
+			              	</div>
+		    							<h2 class="mb-5"><a href="single.html">Turned on MacBook Pro Near Black Framed Eyeglasses</a></h2>
+	    							</div>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<div class="icon d-flex align-items-center my-5">
+	    								<div class="img" style="background-image: url(images/person_1.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_5.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="heading">
+	    								<div class="meta-wrap">
+												<p class="meta">
+				              		<span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+				              		<span><a href="single.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+				              		<span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+				              	</p>
+			              	</div>
+		    							<h2 class="mb-5"><a href="single.html">Turned on MacBook Pro Near Black Framed Eyeglasses</a></h2>
+	    							</div>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<div class="icon d-flex align-items-center my-5">
+	    								<div class="img" style="background-image: url(images/person_1.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_6.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="heading">
+	    								<div class="meta-wrap">
+												<p class="meta">
+				              		<span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+				              		<span><a href="single.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+				              		<span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+				              	</p>
+			              	</div>
+		    							<h2 class="mb-5"><a href="single.html">Turned on MacBook Pro Near Black Framed Eyeglasses</a></h2>
+	    							</div>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<div class="icon d-flex align-items-center my-5">
+	    								<div class="img" style="background-image: url(images/person_1.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_7.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="heading">
+	    								<div class="meta-wrap">
+												<p class="meta">
+				              		<span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+				              		<span><a href="single.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+				              		<span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+				              	</p>
+			              	</div>
+		    							<h2 class="mb-5"><a href="single.html">Turned on MacBook Pro Near Black Framed Eyeglasses</a></h2>
+	    							</div>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<div class="icon d-flex align-items-center my-5">
+	    								<div class="img" style="background-image: url(images/person_1.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_8.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="heading">
+	    								<div class="meta-wrap">
+												<p class="meta">
+				              		<span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+				              		<span><a href="single.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+				              		<span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+				              	</p>
+			              	</div>
+		    							<h2 class="mb-5"><a href="single.html">Turned on MacBook Pro Near Black Framed Eyeglasses</a></h2>
+	    							</div>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<div class="icon d-flex align-items-center my-5">
+	    								<div class="img" style="background-image: url(images/person_1.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_9.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="heading">
+	    								<div class="meta-wrap">
+												<p class="meta">
+				              		<span><i class="icon-calendar mr-2"></i>Sept. 10, 2019</span>
+				              		<span><a href="single.html"><i class="icon-folder-o mr-2"></i>Travel</a></span>
+				              		<span><i class="icon-comment2 mr-2"></i>5 Comment</span>
+				              	</p>
+			              	</div>
+		    							<h2 class="mb-5"><a href="single.html">Turned on MacBook Pro Near Black Framed Eyeglasses</a></h2>
+	    							</div>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<div class="icon d-flex align-items-center my-5">
+	    								<div class="img" style="background-image: url(images/person_1.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
 
 	    	</div>
 	    </section>
