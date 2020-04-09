@@ -133,7 +133,7 @@ sup {
     top: -.5em; }
 
 a {
-    color: #007bff;
+    color: black;
     text-decoration: none;
     background-color: transparent; }
 a:hover {
@@ -8166,7 +8166,7 @@ a {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-    color: white; }
+   }
 a:hover, a:focus {
     text-decoration: none;
     color: white;
@@ -8642,7 +8642,6 @@ h1, h2, h3, h4, h5,
 .blog-entry .img .icon {
     width: 60px;
     height: 60px;
-    background: #fff;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius : 50%;
