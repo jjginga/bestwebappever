@@ -3,6 +3,7 @@ package org.academiadecodigo.bestwebappever.services;
 import org.academiadecodigo.bestwebappever.exceptions.AssociationExistsException;
 import org.academiadecodigo.bestwebappever.exceptions.CustomerNotFoundException;
 import org.academiadecodigo.bestwebappever.exceptions.RecipientNotFoundException;
+import org.academiadecodigo.bestwebappever.persistence.Security;
 import org.academiadecodigo.bestwebappever.persistence.dao.CustomerDao;
 import org.academiadecodigo.bestwebappever.persistence.dao.SpecimenDao;
 import org.academiadecodigo.bestwebappever.persistence.model.Customer;
@@ -173,5 +174,41 @@ public class CustomerServiceImpl implements CustomerService {
 
         customerDao.saveOrUpdate(sCustomer);
         customerDao.saveOrUpdate(rCustomer);
+    }
+
+    @Transactional
+    @Override
+    public boolean login(String username, String password) {
+
+        Customer customer1 = null;
+
+        for (Customer customer : list()) {
+            if(customer.getUsername() == username){
+                customer1=customer;
+            }
+
+        }
+
+        if(customer1==null){
+            return false;
+        }
+
+        return customer1.getPassword().equals(Security.getHash(password));
+    }
+
+    @Transactional
+    @Override
+    public Customer getByUsername(String username) {
+
+        Customer customer1 = null;
+
+        for (Customer customer : list()) {
+            if(customer.getUsername() == username){
+                customer1=customer;
+            }
+
+        }
+
+        return customer1;
     }
 }

@@ -8912,7 +8912,11 @@ textarea.form-control {
   background: #f8f9fa !important; }
 
 .bg-primary {
+<<<<<<< HEAD
   background: #606a62 !important; }
+=======
+  background: #0028ff !important; }
+>>>>>>> master
 
 .image-popup {
   cursor: -webkit-zoom-in;

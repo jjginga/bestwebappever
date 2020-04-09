@@ -75,4 +75,8 @@ public interface CustomerService {
             throws CustomerNotFoundException,  RecipientNotFoundException;
 
     void transferSpecimen(Integer sid, Integer rip, Integer specimenId) throws CustomerNotFoundException, RecipientNotFoundException;
+
+    boolean login(String username, String password);
+
+    Customer getByUsername(String username);
 }

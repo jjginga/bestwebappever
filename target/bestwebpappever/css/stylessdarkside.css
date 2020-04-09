@@ -44,7 +44,11 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+<<<<<<< HEAD
     -webkit-tap-highlight-color: black; }
+=======
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+>>>>>>> master
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block; }
@@ -55,9 +59,15 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+<<<<<<< HEAD
     color: whitesmoke;
     text-align: left;
     background-color: black; }
+=======
+    color: #212529;
+    text-align: left;
+    background-color: #fff; }
+>>>>>>> master
 
 [tabindex="-1"]:focus {
     outline: 0 !important; }
@@ -133,7 +143,11 @@ sup {
     top: -.5em; }
 
 a {
+<<<<<<< HEAD
     color: black;
+=======
+    color: #007bff;
+>>>>>>> master
     text-decoration: none;
     background-color: transparent; }
 a:hover {
@@ -8134,11 +8148,19 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
     font-family: "Poppins", Arial, sans-serif;
+<<<<<<< HEAD
     background: black;
     font-size: 15px;
     line-height: 1.8;
     font-weight: 400;
     color: white; }
+=======
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #666666; }
+>>>>>>> master
 body.offcanvas {
     overflow-x: hidden; }
 body.offcanvas #colorlib-aside {
@@ -8166,10 +8188,17 @@ a {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
+<<<<<<< HEAD
    }
 a:hover, a:focus {
     text-decoration: none;
     color: white;
+=======
+    color: #606a62; }
+a:hover, a:focus {
+    text-decoration: none;
+    color: #606a62;
+>>>>>>> master
     outline: none !important; }
 
 h1, h2, h3, h4, h5,
@@ -8608,7 +8637,11 @@ h1, h2, h3, h4, h5,
 .blog-entry {
     width: 100%;
     margin-bottom: 0;
+<<<<<<< HEAD
     background: black;
+=======
+    background: #fff;
+>>>>>>> master
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -8642,6 +8675,10 @@ h1, h2, h3, h4, h5,
 .blog-entry .img .icon {
     width: 60px;
     height: 60px;
+<<<<<<< HEAD
+=======
+    background: #fff;
+>>>>>>> master
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius : 50%;
@@ -8680,8 +8717,13 @@ h1, h2, h3, h4, h5,
 .blog-entry .text .meta-wrap .meta span a {
     color: #000000; }
 .blog-entry.active, .blog-entry:hover {
+<<<<<<< HEAD
     background: black;
     color: whitesmoke; }
+=======
+    background: #627262;
+    color: rgba(255, 255, 255, 0.8); }
+>>>>>>> master
 .blog-entry.active .text h3 a, .blog-entry:hover .text h3 a {
     color: #fff; }
 .blog-entry.active .meta-wrap .meta span, .blog-entry:hover .meta-wrap .meta span {
@@ -8908,7 +8950,11 @@ textarea.form-control {
     background-position: center center; }
 
 .bg-light {
+<<<<<<< HEAD
     background: black !important; }
+=======
+    background: #f8f9fa !important; }
+>>>>>>> master
 
 .bg-primary {
     background: #0028ff !important; }
