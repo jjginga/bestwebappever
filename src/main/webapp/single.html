@@ -114,11 +114,17 @@
 						take her to your home and  be happy with her. PLEASE!!</p>
 						  <br>
 
-						  <button onclick="myFunction()">I want this person so bad!!</button>
-						  <script>
-							  function myFunction() {
-								  alert("You've apllied to adopt this person");
+						  <button onclick="myFunction()">I want this person!</button>
+						  <script>function myFunction() {
+							  var txt;
+							  var person = prompt("Please enter your email");
+							  if (person == null || person == "") {
+								  txt = "User cancelled";
+							  } else {
+								  txt = "An email will be sent to you if everything is alright :) ";
 							  }
+							  document.getElementById("demo").innerHTML = txt;
+						  }
 						  </script>
 		              </div>
 		            </div>
