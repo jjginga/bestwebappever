@@ -7,10 +7,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "specimen")
 public class Specimen extends AbstractModel {
+
     private String name;
-    private String email;
-    private String phone;
-    private Integer specimenNumber;
     private String description;
 
     @ManyToOne
@@ -32,60 +30,6 @@ public class Specimen extends AbstractModel {
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /**
-     * Gets the email of the recipient
-     *
-     * @return the recipient email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * Sets the email of the recipient
-     *
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * Gets the phone of the recipient
-     *
-     * @return the recipient phone
-     */
-    public String getPhone() {
-        return phone;
-    }
-
-    /**
-     * Sets the phone of the recipient
-     *
-     * @param phone the phone to set
-     */
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    /**
-     * Gets the specimen number
-     *
-     * @return the specimen number
-     */
-    public Integer getSpecimenNumber() {
-        return specimenNumber;
-    }
-
-    /**
-     * Sets the specimen number
-     *
-     * @param specimenNumber the specimen number to set
-     */
-    public void setSpecimenNumber(Integer specimenNumber) {
-        this.specimenNumber = specimenNumber;
     }
 
     /**
@@ -131,10 +75,7 @@ public class Specimen extends AbstractModel {
     public String toString() {
         return "Specimen{" +
                 "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", specimenNumber=" + specimenNumber +
-                ", description='" + description + '\'' +
+               ", description='" + description + '\'' +
                 "} " + super.toString();
     }
 }
