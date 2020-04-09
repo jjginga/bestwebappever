@@ -1,6 +1,7 @@
 package org.academiadecodigo.bestwebappever.controller.web;
 
 import org.academiadecodigo.bestwebappever.command.CustomerDto;
+import org.academiadecodigo.bestwebappever.command.LoginDTO;
 import org.academiadecodigo.bestwebappever.converters.CustomerDtoToCustomer;
 import org.academiadecodigo.bestwebappever.converters.CustomerToCustomerDto;
 import org.academiadecodigo.bestwebappever.converters.SpecimenToSpecimenDto;
@@ -75,7 +76,7 @@ public class CustomerController {
 
         model.addAttribute("specimen", specimenToSpecimenDto.convert(customer.getSpecimens()));
 
-        return "customer/show";
+        return "show";
     }
 
     /**
@@ -125,6 +126,51 @@ public class CustomerController {
         customerService.delete(id);
         redirectAttributes.addFlashAttribute("lastAction", "Deleted " + customer.getFirstName() + " " + customer.getLastName());
         return "redirect:/customer";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/login")
+    public String login(Model model){
+        model.addAttribute("login", new LoginDTO());
+
+        return "login";
+    }
+
+    @RequestMapping(method = RequestMethod.POST, path = {"/", ""}, params = "action=login")
+    public String saveCustomer(@Valid @ModelAttribute("login") LoginDTO loginDTO, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+
+        if (bindingResult.hasErrors()) {
+            return "redirect:/customer/login";
+        }
+
+        if(customerService.login(loginDTO.getUsername(), loginDTO.getPassword())){
+            return "login";
+        }
+
+        Customer customer = customerService.getByUsername(loginDTO.getUsername());
+
+        return "redirect:/customer/" + customer.getId();
+    }
+    @RequestMapping(method = RequestMethod.GET, path = "/register")
+    public String registerCustomer(Model model) {
+        model.addAttribute("customer", new CustomerDto());
+        return "register";
+    }
+
+    @RequestMapping(method = RequestMethod.POST, path = {"/", ""}, params = "action=register")
+    public String rsaveCustomer(@Valid @ModelAttribute("customer") CustomerDto customerDto, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+
+        if (bindingResult.hasErrors()) {
+            return "register";
+        }
+
+        if(customerService.getByUsername(customerDto.getUsername())!=null){
+            return "register";
+        }
+
+        Customer savedCustomer = customerService.save(customerDtoToCustomer.convert(customerDto));
+
+        redirectAttributes.addFlashAttribute("lastAction", "Saved " + savedCustomer.getFirstName() + " " + savedCustomer.getLastName());
+        return "redirect:/customer/" + savedCustomer.getId();
     }
 
 }
