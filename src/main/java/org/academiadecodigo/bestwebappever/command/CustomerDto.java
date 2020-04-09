@@ -11,6 +11,14 @@ public class CustomerDto {
 
     private Integer id;
 
+    @NotNull(message = "Username is mandatory")
+    @NotBlank(message = "Username is mandatory")
+    @Size(min = 6, max = 64)
+    private String username;
+
+    @Size(min = 6, max = 64)
+    private String password;
+
     @NotNull(message = "First name is mandatory")
     @NotBlank(message = "First name is mandatory")
     @Size(min = 3, max = 64)
@@ -117,6 +125,22 @@ public class CustomerDto {
      */
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**

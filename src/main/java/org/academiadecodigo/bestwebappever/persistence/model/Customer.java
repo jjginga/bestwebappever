@@ -1,5 +1,7 @@
 package org.academiadecodigo.bestwebappever.persistence.model;
 
+import org.academiadecodigo.bestwebappever.persistence.Security;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +10,32 @@ import java.util.List;
 @Table(name = "customer")
 public class Customer extends AbstractModel {
 
+    @Column (unique = true)
+    private String username;
+
     private String firstName;
     private String lastName;
     private String email;
     private String phone;
+    private String password;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = Security.getHash(password);
+    }
+
+
 
     @OneToMany(
             // propagate changes on customer entity to account entities
