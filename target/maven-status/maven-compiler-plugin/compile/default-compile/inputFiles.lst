@@ -17,6 +17,7 @@
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/SpringBootstrap.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/CustomerService.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/jpa/JpaSpecimenDao.java
+/home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/Controller.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/SpecimenDao.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/Specimen.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/CustomerDtoToCustomer.java

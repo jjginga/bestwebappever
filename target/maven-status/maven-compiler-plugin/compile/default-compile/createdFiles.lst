@@ -1,3 +1,4 @@
+org/academiadecodigo/bestwebappever/Controller.class
 org/academiadecodigo/bestwebappever/persistence/dao/jpa/JpaSpecimenDao.class
 org/academiadecodigo/bestwebappever/services/CustomerService.class
 org/academiadecodigo/bestwebappever/persistence/dao/Dao.class
