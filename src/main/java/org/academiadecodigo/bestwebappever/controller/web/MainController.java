@@ -16,6 +16,7 @@ public class MainController {
      */
     @RequestMapping("/")
     public String home() {
-        return "redirect:/specimens/list";
+        return "index";
+
     }
 }
