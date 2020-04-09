@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/web/SpecimensController.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/CustomerServiceImpl.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/exceptions/TransactionInvalidException.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/SpringBootstrap.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/SpecimenDtoToSpecimen.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/exceptions/BestWebAppEverException.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/CustomerService.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/CustomerToCustomerDto.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/SpecimenDao.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/AbstractModel.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/Customer.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/SpecimenServiceImpl.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/SpecimenToSpecimenDto.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/command/CustomerDto.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/web/MainController.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/CustomerDao.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/SpecimenService.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/exceptions/CustomerNotFoundException.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/Dao.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/AbstractConverter.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/web/CustomerController.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/jpa/GenericJpaDao.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/Specimen.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/Controller.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/exceptions/RecipientNotFoundException.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/CustomerDtoToCustomer.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/exceptions/AssociationExistsException.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/errors/ErrorMessage.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/command/SpecimenDto.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/Model.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/jpa/JpaSpecimenDao.java
+/Users/anadorotea/Documents/Hackton/bestwepappever-3/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/dao/jpa/JpaCustomerDao.java
+=======
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/converters/SpecimenToSpecimenDto.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/Customer.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/errors/ErrorMessage.java
@@ -32,3 +66,4 @@
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/services/SpecimenServiceImpl.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/controller/web/CustomerController.java
 /home/joel/workspace/bestwebappever/src/main/java/org/academiadecodigo/bestwebappever/persistence/model/AbstractModel.java
+>>>>>>> master
