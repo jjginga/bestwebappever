@@ -25,7 +25,7 @@
   // without `<ul>`s. The `::before` pseudo-element generates an element
   // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
   //
-  // To trick IE into suppressing the underline, we give the pseudo-element an
+  // To trick IE into suppressing the underline, we give.html the pseudo-element an
   // underline and then immediately remove it.
   + .breadcrumb-item:hover::before {
     text-decoration: underline;
