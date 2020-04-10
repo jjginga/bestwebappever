@@ -8681,7 +8681,7 @@ h1, h2, h3, h4, h5,
         .blog-entry .text .meta-wrap .meta span a {
           color: #000000; }
   .blog-entry.active, .blog-entry:hover {
-    background: #627262;
+    background: #fff;
     color: rgba(255, 255, 255, 0.8); }
     .blog-entry.active .text h3 a, .blog-entry:hover .text h3 a {
       color: #fff; }
